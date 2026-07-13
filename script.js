@@ -1,9 +1,13 @@
 const phoneNumber = "5564992674223";
+const siteOriginMessage = "Olá, vim pelo site da Vilela Turismo.";
 const defaultMessage =
   "Olá, quero cotar uma passagem aérea com a Vilela Turismo. Pode me ajudar com destino, datas e número de passageiros?";
 
 function buildWhatsAppUrl(message = defaultMessage) {
-  return `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+  const messageWithoutGreeting = message.replace(/^Olá,\s*/i, "");
+  const normalizedMessage = `${messageWithoutGreeting.charAt(0).toUpperCase()}${messageWithoutGreeting.slice(1)}`;
+  const completeMessage = `${siteOriginMessage} ${normalizedMessage}`;
+  return `https://wa.me/${phoneNumber}?text=${encodeURIComponent(completeMessage)}`;
 }
 
 function updateWhatsAppLinks() {
@@ -815,6 +819,37 @@ function setupFaq() {
   });
 }
 
+function setupScrollReveal() {
+  if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+  const elements = document.querySelectorAll(
+    "main > section:not(.hero), .trust-grid > div, .quote-layout > *, .section-heading, .benefit-card, .clients-shell, .client-card, .reviews-shell, .review-card, .conversion-layout > *, .step, .services-section .split > *, .services-list span, .faq-section .split > *, .faq-list details, .footer-layout > *, .footer-bottom"
+  );
+
+  elements.forEach((element, index) => {
+    element.classList.add("scroll-reveal");
+    element.style.setProperty("--reveal-delay", `${(index % 4) * 45}ms`);
+  });
+
+  if (!("IntersectionObserver" in window)) {
+    elements.forEach((element) => element.classList.add("is-visible"));
+    return;
+  }
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add("is-visible");
+        observer.unobserve(entry.target);
+      });
+    },
+    { threshold: 0.08, rootMargin: "0px 0px -8% 0px" }
+  );
+
+  elements.forEach((element) => observer.observe(element));
+}
+
 document.querySelector("[data-year]").textContent = new Date().getFullYear();
 setupEditMode();
 updateWhatsAppLinks();
@@ -829,3 +864,4 @@ setupClientCarousel();
 setupProofUploads();
 setupClientPhotoUploads();
 setupFaq();
+setupScrollReveal();

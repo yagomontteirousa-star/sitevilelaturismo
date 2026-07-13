@@ -27,14 +27,14 @@
     <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon-192.png" />
     <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
 
-    <!-- Fontes: Playfair Display (destaque elegante) + Inter (leitura) -->
+    <!-- Fontes: Montserrat (títulos) + Playfair Display (destaque elegante) + Inter (leitura) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Montserrat:wght@600;700;800;900&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet" />
 
     <link rel="preload" href="assets/hero-vilela-turismo.webp" as="image" />
     <link rel="preload" href="assets/vilela-logo-mark-header.png" as="image" />
-    <link rel="stylesheet" href="styles.css?v=41" />
+    <link rel="stylesheet" href="styles.css?v=43" />
   </head>
   <body>
     <svg class="icon-sprite" aria-hidden="true">
@@ -65,6 +65,14 @@
       <symbol id="icon-map" viewBox="0 0 24 24">
         <path d="M12 21s6-5.3 6-11a6 6 0 0 0-12 0c0 5.7 6 11 6 11Z" fill="none" stroke="currentColor" stroke-width="1.8"/>
         <circle cx="12" cy="10" r="2.2" fill="none" stroke="currentColor" stroke-width="1.8"/>
+      </symbol>
+      <symbol id="icon-hotel" viewBox="0 0 24 24">
+        <rect x="4" y="3" width="16" height="18" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/>
+        <path d="M8 7h2M14 7h2M8 11h2M14 11h2M9 21v-5h6v5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+      </symbol>
+      <symbol id="icon-car" viewBox="0 0 24 24">
+        <path d="m6 11 1.7-4h8.6l1.7 4M5 11h14a2 2 0 0 1 2 2v4H3v-4a2 2 0 0 1 2-2Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+        <path d="M5 17v2M19 17v2M7 14h.01M17 14h.01" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
       </symbol>
       <symbol id="icon-chat" viewBox="0 0 24 24">
         <path d="M4 5.5A3.5 3.5 0 0 1 7.5 2h9A3.5 3.5 0 0 1 20 5.5v6A3.5 3.5 0 0 1 16.5 15H11l-5 4v-4.2A3.5 3.5 0 0 1 4 11.5v-6Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
@@ -143,12 +151,12 @@
         <div class="hero-overlay"></div>
         <div class="hero-content layout">
           <h1 id="hero-title">
-            <span>Passagens aéreas</span>
+            <span>Pacotes aéreos</span>
             <em class="hero-title-nowrap">com atendimento</em>
-            <em>consultivo.</em>
+            <em>personalizado.</em>
           </h1>
           <p class="hero-subtitle">
-            Receba opções de voos, orientação sobre tarifas, bagagens e conexões, com suporte humano para comprar sua passagem com mais segurança.
+            Receba opções de voos, orientação sobre tarifas, bagagens e conexões, com suporte humanizado para viajar com mais segurança.
           </p>
 
           <div class="hero-actions" aria-label="Ações principais">
@@ -179,22 +187,22 @@
               <svg class="icon"><use href="#icon-star"></use></svg>
             </span>
             <span class="trust-value">5,0</span>
-            <span class="trust-label">avaliação no Google</span>
+            <span class="trust-label trust-label-google"><svg class="icon" aria-hidden="true"><use href="#icon-google"></use></svg>Avaliação no Google</span>
           </div>
           <div>
             <span class="trust-icon" aria-hidden="true"><svg class="icon"><use href="#icon-like"></use></svg></span>
             <span class="trust-value">58</span>
-            <span class="trust-label">clientes avaliaram</span>
+            <span class="trust-label">Clientes avaliaram</span>
           </div>
           <div>
             <span class="trust-icon" aria-hidden="true"><svg class="icon"><use href="#icon-map"></use></svg></span>
             <span class="trust-value">Caldas Novas</span>
-            <span class="trust-label">agência com endereço físico</span>
+            <span class="trust-label">Agência com endereço físico</span>
           </div>
           <div>
             <span class="trust-icon trust-icon-whatsapp" aria-hidden="true"><svg class="icon"><use href="#icon-whatsapp"></use></svg></span>
             <span class="trust-value">WhatsApp</span>
-            <span class="trust-label">cotação rápida e orientada</span>
+            <span class="trust-label">Cotação rápida e orientada</span>
           </div>
         </div>
       </section>
@@ -280,9 +288,9 @@
         <div class="layout">
           <div class="section-heading">
             <p class="eyebrow">Por que cotar com a Vilela</p>
-            <h2 id="benefits-title">Atendimento, preço e condições no mesmo lugar</h2>
+            <h2 id="benefits-title">Sua próxima viagem com melhor custo-benefício.</h2>
             <p>
-              Uma experiência pensada para quem quer viajar com tranquilidade e resolver a compra sem complicação.
+              Uma experiência pensada para quem quer viajar com tranquilidade.
             </p>
           </div>
 
@@ -291,12 +299,11 @@
               <span class="icon-wrap"><svg class="icon"><use href="#icon-card"></use></svg></span>
               <div class="payment-highlight">
                 <span class="payment-label">Diferencial no boleto</span>
-                <strong>Parcelas a partir de <span class="price-nowrap">R$ 60</span></strong>
-                <small>em até 12x</small>
+                <strong>Parcelas a partir de <span class="price-nowrap">R$60</span></strong>
               </div>
               <h3>Condições facilitadas</h3>
               <p>
-                Compre sua passagem no boleto em até 12x sem juros, com ou sem entrada, e sem depender do limite do cartão de crédito.
+                Compre seu pacote de viagem no boleto em até 12x sem juros, com ou sem entrada, e sem depender do limite do cartão de crédito.
               </p>
               <div class="payment-tags" aria-label="Formas de pagamento">
                 <span>Boleto</span>
@@ -311,9 +318,9 @@
               <p>Pesquisa de horários, conexões e tarifas para encontrar alternativas compatíveis com seu perfil.</p>
             </article>
             <article class="benefit-card">
-              <span class="icon-wrap"><svg class="icon"><use href="#icon-chat"></use></svg></span>
-              <h3>Atendimento humanizado</h3>
-              <p>Você fala com uma equipe real, que entende sua viagem e explica as opções com clareza.</p>
+              <span class="icon-wrap"><svg class="icon"><use href="#icon-hotel"></use></svg></span>
+              <h3>Ótimas hospedagens inclusas</h3>
+              <p>Os pacotes incluem ótimas hospedagens, com café da manhã incluso, para você aproveitar a viagem com mais conforto e tranquilidade.</p>
             </article>
             <article class="benefit-card">
               <span class="icon-wrap"><svg class="icon"><use href="#icon-shield"></use></svg></span>
@@ -330,13 +337,12 @@
             <p class="eyebrow">Nossos clientes</p>
             <h2 id="clients-title">Registros especiais de clientes vivendo a viagem</h2>
             <p>
-              Momentos felizes de quem embarcou com apoio da Vilela Turismo e transformou o planejamento em lembranças para guardar.
+              Momentos felizes de quem embarcou com apoio da Vilela Turismo.
             </p>
           </div>
 
           <div class="clients-shell" data-client-carousel data-carousel-autoplay="true">
-            <div class="review-carousel-top">
-              <p>Fotos que mostram o melhor da viagem: clientes aproveitando destinos, experiências e cada detalhe planejado com cuidado.</p>
+            <div class="review-carousel-top actions-only">
               <div class="review-controls">
                 <button class="carousel-button" type="button" aria-label="Foto anterior" data-client-prev>‹</button>
                 <button class="carousel-button" type="button" aria-label="Próxima foto" data-client-next>›</button>
@@ -458,12 +464,11 @@
         <div class="layout">
           <div class="section-heading">
             <p class="eyebrow">Avaliações</p>
-            <h2 id="reviews-title">Confiança de quem já contou com a Vilela Turismo</h2>
+            <h2 id="reviews-title">Veja o que nossos clientes têm a dizer</h2>
           </div>
 
           <div class="reviews-shell" data-review-carousel data-carousel-autoplay="true">
-            <div class="review-carousel-top">
-              <p>Veja o que nossos clientes dizem sobre o atendimento, o cuidado e a experiência de viajar com a Vilela Turismo.</p>
+            <div class="review-carousel-top actions-only">
               <div class="review-controls">
                 <button class="carousel-button" type="button" aria-label="Avaliação anterior" data-review-prev>‹</button>
                 <button class="carousel-button" type="button" aria-label="Próxima avaliação" data-review-next>›</button>
@@ -643,6 +648,12 @@
             </div>
 
             <div class="review-dots" aria-label="Navegação das avaliações" data-review-dots></div>
+            <div class="center-action review-action">
+              <a class="button button-secondary" href="https://www.google.com/maps/search/?api=1&amp;query=Vilela%20Turismo%20Caldas%20Novas" target="_blank" rel="noopener noreferrer">
+                <svg class="icon"><use href="#icon-google"></use></svg>
+                Deixe sua avaliação
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -650,8 +661,8 @@
       <section class="conversion-section" aria-labelledby="conversion-title">
         <div class="layout conversion-layout">
           <div>
-            <p class="eyebrow light">Atendimento direto</p>
-            <h2 id="conversion-title">Sua próxima viagem pode começar com uma passagem bem escolhida</h2>
+            <p class="eyebrow light">Atendimento personalizado</p>
+            <h2 id="conversion-title">Sua próxima viagem começa com a escolha de uma agência credenciada.</h2>
             <p>
               Chame a Vilela Turismo, informe os dados da sua viagem e receba uma cotação com orientação profissional.
             </p>
@@ -679,17 +690,17 @@
             <article class="step">
               <span>02</span>
               <h3>Análise da sua necessidade</h3>
-              <p>A equipe avalia horários, conexões, bagagem, orçamento e forma de pagamento.</p>
+              <p>Nada é padrão. A equipe avalia seu perfil e seu orçamento.</p>
             </article>
             <article class="step">
               <span>03</span>
-              <h3>Receba opções claras</h3>
+              <h3>Receba opções de pacote</h3>
               <p>Você compara alternativas com apoio para entender o melhor custo-benefício.</p>
             </article>
             <article class="step">
               <span>04</span>
-              <h3>Confirme com suporte</h3>
-              <p>Depois da escolha, a agência orienta os próximos passos da compra.</p>
+              <h3>Confirme sua escolha</h3>
+              <p>Ao finalizar, a agência orienta os próximos passos da sua viagem.</p>
             </article>
           </div>
 
@@ -705,20 +716,18 @@
       <section class="section services-section" aria-labelledby="services-title">
         <div class="layout split">
           <div>
-            <p class="eyebrow">Viagem completa</p>
-            <h2 id="services-title">Outros detalhes para deixar sua viagem mais tranquila</h2>
+            <p class="eyebrow">Experiências adicionais</p>
+            <h2 id="services-title">Outros detalhes para deixar sua viagem mais completa</h2>
             <p>
               No que fizer sentido para a sua viagem, a Vilela Turismo ajuda você.
             </p>
           </div>
 
           <div class="services-list" aria-label="Serviços">
-            <span><svg class="icon"><use href="#icon-check"></use></svg>Planejamento de viagem personalizado</span>
-            <span><svg class="icon"><use href="#icon-suitcase"></use></svg>Pacotes nacionais e internacionais</span>
-            <span><svg class="icon"><use href="#icon-check"></use></svg>Hospedagens no Brasil e exterior</span>
-            <span><svg class="icon"><use href="#icon-map"></use></svg>Passeios e transfers</span>
-            <span class="optional-mobile"><svg class="icon"><use href="#icon-shield"></use></svg>Seguro viagem</span>
-            <span class="optional-mobile"><svg class="icon"><use href="#icon-card"></use></svg>Pacotes all inclusive e cruzeiros</span>
+            <span><svg class="icon"><use href="#icon-car"></use></svg>Serviço de transfer</span>
+            <span><svg class="icon"><use href="#icon-map"></use></svg>Passeios e city tour</span>
+            <span><svg class="icon"><use href="#icon-shield"></use></svg>Seguro viagem</span>
+            <span><svg class="icon"><use href="#icon-hotel"></use></svg>Resorts all inclusive</span>
           </div>
         </div>
       </section>
@@ -728,9 +737,6 @@
           <div>
             <p class="eyebrow">Dúvidas frequentes</p>
             <h2 id="faq-title">Perguntas que costumam aparecer antes da compra</h2>
-            <p>
-              Se preferir, a equipe responde tudo diretamente pelo WhatsApp.
-            </p>
             <a class="button button-secondary js-whatsapp" href="#" data-message="Olá, tenho uma dúvida sobre compra de passagens com a Vilela Turismo.">
               <svg class="icon"><use href="#icon-whatsapp"></use></svg>
               Tirar dúvida no WhatsApp
@@ -747,17 +753,18 @@
               <p>Sim. Você pode solicitar a cotação, receber opções e alinhar os detalhes do atendimento diretamente pelo WhatsApp.</p>
             </details>
             <details>
-              <summary>A passagem pode ser parcelada?</summary>
+              <summary>A viagem pode ser parcelada?</summary>
               <p>Sim. A Vilela Turismo pode orientar sobre pagamento no boleto em até 12x sem juros, com ou sem entrada, sujeito à análise de crédito. Também há opções de pagamento por Pix e cartão de crédito.</p>
             </details>
             <details>
               <summary>Comprar com agência é mais caro?</summary>
-              <p>Nem sempre. A agência ajuda a avaliar custo-benefício considerando preço, horários, conexões, bagagem e suporte.</p>
+              <p>Não. A agência ajuda a avaliar custo-benefício considerando preço, horários, conexões e suporte especializado.</p>
             </details>
             <details>
               <summary>Vocês ajudam depois da compra?</summary>
               <p>Sim. A equipe pode orientar sobre dúvidas relacionadas ao voo, documentação, bagagem e próximos passos da viagem.</p>
             </details>
+            <p class="faq-whatsapp-note">Se preferir, a equipe responde tudo diretamente pelo WhatsApp.</p>
           </div>
         </div>
       </section>
@@ -768,30 +775,33 @@
         <div class="footer-brand-block">
           <a class="brand footer-brand" href="#inicio" aria-label="Vilela Turismo">
             <span class="footer-logo-card">
-              <img src="assets/vilela-logo-original-trim.png" alt="Vilela Turismo e Locações" />
+              <img src="assets/vilela-logo-footer.jpeg" alt="Vilela Turismo" />
             </span>
           </a>
-          <p>Passagens aéreas, pacotes, hospedagens, transfers e planejamento de viagem em Caldas Novas.</p>
         </div>
         <address>
           <strong>Contato</strong>
           <a href="tel:+5564992674223">WhatsApp: (64) 99267-4223</a>
           <span>Av. C, Qd. 41, Lt. 01, Sala 04</span>
-          <span>Estância Itaguaí, Caldas Novas/GO</span>
+          <span>Itaguaí II, Caldas Novas/GO</span>
         </address>
         <div class="footer-actions">
           <a class="button button-primary js-whatsapp" href="#" data-message="Olá, quero falar com a Vilela Turismo sobre passagens aéreas.">
             <svg class="icon"><use href="#icon-whatsapp"></use></svg>
             Falar no WhatsApp
           </a>
+          <div class="footer-map">
+            <iframe
+              title="Mapa da Vilela Turismo"
+              src="https://www.google.com/maps?q=Av.%20C%2C%20Qd.%2041%2C%20Lt.%2001%2C%20Sala%2004%2C%20Itagua%C3%AD%20II%2C%20Caldas%20Novas%2C%20GO&amp;output=embed"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
           <div class="footer-links">
-            <a class="text-link" href="https://www.google.com/maps/search/?api=1&query=Vilela%20Turismo%20Caldas%20Novas" target="_blank" rel="noopener noreferrer">
+            <a class="text-link" href="https://www.google.com/maps/search/?api=1&amp;query=Av.%20C%2C%20Qd.%2041%2C%20Lt.%2001%2C%20Sala%2004%2C%20Itagua%C3%AD%20II%2C%20Caldas%20Novas%2C%20GO" target="_blank" rel="noopener noreferrer">
               <svg class="icon"><use href="#icon-map"></use></svg>
               Ver rota no mapa
-            </a>
-            <a class="text-link" href="https://www.instagram.com/vilelaturismo/" target="_blank" rel="noopener noreferrer" aria-label="Instagram da Vilela Turismo">
-              <svg class="icon"><use href="#icon-instagram"></use></svg>
-              Instagram @vilelaturismo
             </a>
           </div>
         </div>
@@ -806,7 +816,7 @@
       <span>Cotar no WhatsApp</span>
     </a>
 
-    <script src="script.js?v=34"></script>
+    <script src="script.js?v=37"></script>
   </body>
 </html>
 

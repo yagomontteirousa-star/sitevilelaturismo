@@ -1839,9 +1839,9 @@ details p {
 }
 
 .footer-dev img {
-  height: 22px;
+  height: 30px;
   width: auto;
-  max-width: 150px;
+  max-width: 200px;
   object-fit: contain;
 }
 

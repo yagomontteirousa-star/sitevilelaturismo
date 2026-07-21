@@ -1820,6 +1820,22 @@ address a:hover {
   font-size: 13px;
 }
 
+.footer-dev {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: rgba(255, 255, 255, 0.64);
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.footer-dev img {
+  height: 22px;
+  width: auto;
+  max-width: 150px;
+  object-fit: contain;
+}
+
 .site-footer .text-link {
   color: var(--white);
   border-color: rgba(0, 153, 41, 0.58);

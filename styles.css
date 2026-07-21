@@ -41,7 +41,6 @@
 }
 
 /* Ferramentas de edição só aparecem com "?editar" na URL (ver setupEditMode no script.js) */
-body:not(.is-edit-mode) .hero-upload,
 body:not(.is-edit-mode) .client-photo-upload,
 body:not(.is-edit-mode) .whatsapp-upload,
 body:not(.is-edit-mode) .whatsapp-proof-card {
@@ -127,7 +126,7 @@ svg {
   gap: 24px;
   padding: 16px 32px;
   background: rgba(255, 255, 255, 0.96);
-  color: (--brand-green-dark);
+  color: var(--brand-green-dark);
 }
 
 .site-header.is-scrolled,
@@ -174,7 +173,6 @@ svg {
   opacity: 0.78;
 }
 
-.site-header .brand small,
 .site-header .brand small {
   color: var(--brand-green-dark);
   opacity: 1;
@@ -235,7 +233,6 @@ svg {
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.16);
 }
 
-.site-header .header-cta,
 .site-header .header-cta {
   background: var(--navy);
   color: var(--white);
@@ -341,31 +338,15 @@ svg {
 
 .eyebrow {
   margin: 0 0 18px;
-  color: var(--taupe);
+  color: #565c6b;
   font-size: 11px;
   font-weight: 800;
   letter-spacing: 0.28em;
   text-transform: uppercase;
 }
 
-.hero .eyebrow,
 .eyebrow.light {
   color: rgba(255, 255, 255, 0.82);
-}
-
-.hero .eyebrow {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  max-width: 680px;
-}
-
-.hero .eyebrow::before {
-  content: "";
-  width: 44px;
-  height: 1px;
-  background: rgba(255, 255, 255, 0.62);
-  flex: 0 0 auto;
 }
 
 h1,
@@ -469,60 +450,6 @@ p {
 .hero-proof .icon,
 .stars .icon {
   color: var(--gold);
-}
-
-.hero-dots {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-
-.hero-dot {
-  width: 9px;
-  height: 9px;
-  border: 0;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.42);
-  cursor: pointer;
-  transition: width 180ms ease, background 180ms ease;
-}
-
-.hero-dot.is-active {
-  width: 28px;
-  background: var(--white);
-}
-
-.hero-upload {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  min-height: 38px;
-  padding: 0 13px;
-  border: 1px solid rgba(255, 255, 255, 0.34);
-  border-radius: 999px;
-  color: var(--white);
-  background: rgba(255, 255, 255, 0.12);
-  backdrop-filter: blur(12px);
-  font-size: 13px;
-  font-weight: 900;
-  cursor: pointer;
-}
-
-.hero-upload:hover {
-  background: rgba(255, 255, 255, 0.2);
-}
-
-.hero-upload .icon {
-  width: 16px;
-  height: 16px;
-}
-
-.hero-upload input {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  opacity: 0;
-  pointer-events: none;
 }
 
 .trust-band {
@@ -846,7 +773,7 @@ p {
   color: var(--ink);
   background: transparent;
   font-size: 13px;
-  font-weight: 850;
+  font-weight: 800;
   cursor: pointer;
   transition: background 150ms ease, color 150ms ease, border-color 150ms ease, transform 150ms ease;
 }
@@ -2136,16 +2063,6 @@ address a:hover {
     letter-spacing: 0.18em;
   }
 
-  .hero .eyebrow {
-    gap: 10px;
-    align-items: flex-start;
-  }
-
-  .hero .eyebrow::before {
-    width: 28px;
-    margin-top: 6px;
-  }
-
   h1 {
     max-width: 100%;
     margin-bottom: 14px;
@@ -2198,16 +2115,6 @@ address a:hover {
   .hero-proof span {
     min-height: 34px;
     padding: 0 11px;
-    font-size: 12px;
-  }
-
-  .hero-dots {
-    flex: 1 1 100%;
-  }
-
-  .hero-upload {
-    min-height: 36px;
-    padding: 0 12px;
     font-size: 12px;
   }
 

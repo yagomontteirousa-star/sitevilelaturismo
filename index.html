@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="theme-color" content="#111874" />
     <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://vilelaturismo.com/" />
     <title>Vilela Turismo | Passagens Aéreas em Caldas Novas</title>
     <meta
       name="description"
@@ -13,6 +14,7 @@
 
     <!-- Open Graph: preview ao compartilhar no WhatsApp e redes sociais -->
     <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://vilelaturismo.com/" />
     <meta property="og:site_name" content="Vilela Turismo" />
     <meta property="og:title" content="Vilela Turismo | Passagens Aéreas em Caldas Novas" />
     <meta property="og:description" content="Cote sua passagem aérea com atendimento humano. Boleto em até 12x sem juros, Pix e cartão. Avaliação 5,0 no Google." />
@@ -30,11 +32,39 @@
     <!-- Fontes: Montserrat (títulos) + Playfair Display (destaque elegante) + Inter (leitura) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&family=Montserrat:wght@600;700;800;900&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&family=Montserrat:wght@600;700;800;900&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet" />
 
     <link rel="preload" href="assets/hero-vilela-turismo.webp" as="image" />
     <link rel="preload" href="assets/vilela-logo-mark-header.png" as="image" />
-    <link rel="stylesheet" href="styles.css?v=43" />
+    <link rel="stylesheet" href="styles.css?v=44" />
+
+    <!-- Dados estruturados: ajudam o Google a exibir nome, endereço, telefone e nota. -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "TravelAgency",
+      "name": "Vilela Turismo",
+      "description": "Agência de viagens em Caldas Novas: cotação de passagens aéreas e pacotes com atendimento consultivo e suporte pelo WhatsApp.",
+      "url": "https://vilelaturismo.com/",
+      "image": "https://vilelaturismo.com/assets/og-vilela-turismo.png",
+      "telephone": "+55-64-99267-4223",
+      "priceRange": "$$",
+      "areaServed": "Brasil",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Av. C, Qd. 41, Lt. 01, Sala 04, Itaguaí II",
+        "addressLocality": "Caldas Novas",
+        "addressRegion": "GO",
+        "addressCountry": "BR"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "reviewCount": "58",
+        "bestRating": "5"
+      }
+    }
+    </script>
   </head>
   <body>
     <svg class="icon-sprite" aria-hidden="true">
@@ -139,7 +169,7 @@
 
     <main id="inicio">
       <section class="hero" aria-labelledby="hero-title">
-        <div class="hero-media" data-hero-slider>
+        <div class="hero-media" data-hero-slider aria-hidden="true">
           <img class="hero-slide is-active" src="assets/hero-vilela-turismo.webp" alt="Experiência de viagem com atendimento da Vilela Turismo" data-hero-group="destination" fetchpriority="high" />
           <img class="hero-slide" src="assets/hero-escritorio-fachada.webp" alt="Fachada do escritório da Vilela Turismo em Caldas Novas" data-hero-group="office" data-hero-focus="facade" loading="lazy" />
           <img class="hero-slide" src="assets/hero-praia.webp" alt="Praia tropical para viagem de férias" data-hero-group="destination" loading="lazy" />
@@ -169,7 +199,6 @@
 
           <div class="hero-proof" aria-label="Provas de confiança">
             <span><svg class="icon"><use href="#icon-google"></use></svg> 5,0 no Google</span>
-            <span>58 avaliações</span>
             <span>Atendimento local</span>
           </div>
 
@@ -816,7 +845,7 @@
       <span>Cotar no WhatsApp</span>
     </a>
 
-    <script src="script.js?v=37"></script>
+    <script src="script.js?v=38"></script>
   </body>
 </html>
 

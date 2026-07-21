@@ -85,8 +85,6 @@ function setupSmoothAnchors() {
 
 function setupHeroSlider() {
   const slider = document.querySelector("[data-hero-slider]");
-  const dotsWrap = document.querySelector("[data-hero-dots]");
-  const upload = document.querySelector("[data-hero-upload]");
   if (!slider) return;
 
   let slides = Array.from(slider.querySelectorAll(".hero-slide"));
@@ -118,29 +116,6 @@ function setupHeroSlider() {
     currentIndex = 0;
   };
 
-  const renderDots = () => {
-    if (!dotsWrap) return;
-    dotsWrap.innerHTML = "";
-    slides.forEach((_, index) => {
-      const dot = document.createElement("button");
-      dot.className = "hero-dot";
-      dot.type = "button";
-      dot.setAttribute("aria-label", `Ver imagem ${index + 1} do banner`);
-      dot.addEventListener("click", () => {
-        goToSlide(index);
-        restartSlider();
-      });
-      dotsWrap.appendChild(dot);
-    });
-  };
-
-  const updateDots = () => {
-    if (!dotsWrap) return;
-    dotsWrap.querySelectorAll(".hero-dot").forEach((dot, index) => {
-      dot.classList.toggle("is-active", index === currentIndex);
-    });
-  };
-
   const goToSlide = (index) => {
     refreshSlides();
     if (!slides.length) return;
@@ -148,7 +123,6 @@ function setupHeroSlider() {
     slides.forEach((slide, slideIndex) => {
       slide.classList.toggle("is-active", slideIndex === currentIndex);
     });
-    updateDots();
   };
 
   const nextSlide = () => goToSlide(currentIndex + 1);
@@ -164,31 +138,6 @@ function setupHeroSlider() {
     timer = window.setInterval(nextSlide, 3800);
   };
 
-  const restartSlider = () => {
-    stopSlider();
-    startSlider();
-  };
-
-  upload?.addEventListener("change", () => {
-    const files = Array.from(upload.files || []).filter((file) => file.type.startsWith("image/"));
-    if (!files.length) return;
-
-    const firstNewIndex = slides.length;
-    files.forEach((file, index) => {
-      const image = document.createElement("img");
-      image.className = "hero-slide";
-      image.src = URL.createObjectURL(file);
-      image.alt = index === 0 ? "Foto adicionada ao banner da Vilela Turismo" : `Foto adicionada ao banner ${index + 1}`;
-      slider.appendChild(image);
-    });
-
-    upload.value = "";
-    refreshSlides();
-    renderDots();
-    goToSlide(firstNewIndex);
-    restartSlider();
-  });
-
   document.addEventListener("visibilitychange", () => {
     if (document.hidden) {
       stopSlider();
@@ -198,7 +147,6 @@ function setupHeroSlider() {
   });
 
   orderSlides();
-  renderDots();
   goToSlide(currentIndex);
   startSlider();
 }

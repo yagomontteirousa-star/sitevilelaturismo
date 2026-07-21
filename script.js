@@ -771,7 +771,7 @@ function setupScrollReveal() {
   if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
 
   const elements = document.querySelectorAll(
-    "main > section:not(.hero), .trust-grid > div, .quote-layout > *, .section-heading, .benefit-card, .clients-shell, .client-card, .reviews-shell, .review-card, .conversion-layout > *, .step, .services-section .split > *, .services-list span, .faq-section .split > *, .faq-list details, .footer-layout > *, .footer-bottom"
+    "main > section:not(.hero), .trust-grid > div, .quote-layout > *, .section-heading, .benefit-card, .clients-shell, .client-card, .reviews-shell, .review-card, .conversion-layout > *, .step, .services-section .split > *, .services-list span, .faq-section .split > *, .faq-list details"
   );
 
   elements.forEach((element, index) => {

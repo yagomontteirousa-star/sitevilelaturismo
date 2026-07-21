@@ -1725,14 +1725,6 @@ details p {
   transform: scale(1.6);
 }
 
-.footer-tagline {
-  max-width: 320px;
-  margin: 0;
-  color: rgba(255, 255, 255, 0.78);
-  font-size: 15px;
-  line-height: 1.6;
-}
-
 .footer-social {
   display: flex;
   gap: 10px;
